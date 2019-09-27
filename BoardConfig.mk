@@ -14,20 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/ocean
-
-# Architecture
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a53
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+DEVICE_PATH := device/motorola/channel
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8953
@@ -35,19 +22,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
-
-# Kernel
-BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.usbconfigfs=true
-BOARD_KERNEL_CMDLINE += androidboot.hab.csv=1 androidboot.hab.product=ocean androidboot.hab.cid=50 androidboot.selinux=permissive
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
-
-ifeq ($(strip $(TARGET_PREBUILT_KERNEL)),)
-TARGET_KERNEL_CONFIG := ocean_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/sdm632
-endif
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -60,6 +34,13 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+
+include $(DEVICE_PATH)/prebuilt/kernel.mk
 
 # Platform
 PLATFORM_SECURITY_PATCH := 2030-01-01
@@ -84,4 +65,4 @@ TARGET_USES_LOGD := true
 # Installer
 AB_OTA_UPDATER := true
 USE_RECOVERY_INSTALLER := true
-RECOVERY_INSTALLER_PATH := device/motorola/ocean/installer
+RECOVERY_INSTALLER_PATH := device/motorola/channel/installer
