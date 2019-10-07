@@ -57,6 +57,7 @@ TW_THEME := portrait_hdpi
 TW_USE_TOOLBOX := true
 TW_Y_OFFSET := 110
 TW_H_OFFSET := -110
+TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/etc/recovery.fstab
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true

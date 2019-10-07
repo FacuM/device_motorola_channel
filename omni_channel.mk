@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Inherit from channel device
+$(call inherit-product, device/motorola/channel/device.mk)
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
