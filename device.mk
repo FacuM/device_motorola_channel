@@ -21,36 +21,36 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/recovery.fstab:recovery.fstab \
-    $(LOCAL_PATH)/rootdir/vendor/compatibility_matrix.xml:vendor/compatibility_matrix.xml \
-    $(LOCAL_PATH)/rootdir/vendor/manifest.xml:vendor/manifest.xml \
-    $(LOCAL_PATH)/rootdir/vendor/lib64:vendor/lib64 \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libkeymasterdeviceutils.so:vendor/lib64/libkeymasterdeviceutils.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libGPreqcancel_svc.so:vendor/lib64/libGPreqcancel_svc.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libkeymasterutils.so:vendor/lib64/libkeymasterutils.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/librpmb.so:vendor/lib64/librpmb.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libdrmfs.so:vendor/lib64/libdrmfs.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libdiag.so:vendor/lib64/libdiag.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libssd.so:vendor/lib64/libssd.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libqtikeymaster4.so:vendor/lib64/libqtikeymaster4.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libsecureui_svcsock.so:vendor/lib64/libsecureui_svcsock.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libqservice.so:vendor/lib64/libqservice.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libSecureUILib.so:vendor/lib64/libSecureUILib.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libsecureui.so:vendor/lib64/libsecureui.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libStDrvInt.so:vendor/lib64/libStDrvInt.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/hw:vendor/lib64/hw \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/hw/android.hardware.boot@1.0-impl.so:vendor/lib64/hw/android.hardware.boot@1.0-impl.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/hw/bootctrl.msm8953.so:vendor/lib64/hw/bootctrl.msm8953.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libQSEEComAPI.so:vendor/lib64/libQSEEComAPI.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libGPreqcancel.so:vendor/lib64/libGPreqcancel.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/librecovery_updater_msm.so:vendor/lib64/librecovery_updater_msm.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libkeymasterprovision.so:vendor/lib64/libkeymasterprovision.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libtime_genoff.so:vendor/lib64/libtime_genoff.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libqdutils.so:vendor/lib64/libqdutils.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libqisl.so:vendor/lib64/libqisl.so \
-    $(LOCAL_PATH)/rootdir/vendor/lib64/libdrmtime.so:vendor/lib64/libdrmtime.so \
+    $(LOCAL_PATH)/rootdir/etc/recovery.fstab:$(VENDOR_PATH)/etc/recovery.fstab \
+    $(LOCAL_PATH)/rootdir/vendor/compatibility_matrix.xml:$(VENDOR_PATH)/compatibility_matrix.xml \
+    $(LOCAL_PATH)/rootdir/vendor/manifest.xml:$(VENDOR_PATH)/manifest.xml \
+    $(LOCAL_PATH)/rootdir/vendor/lib64:$(VENDOR_PATH)/lib64 \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libkeymasterdeviceutils.so:$(VENDOR_PATH)/lib64/libkeymasterdeviceutils.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libGPreqcancel_svc.so:$(VENDOR_PATH)/lib64/libGPreqcancel_svc.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libkeymasterutils.so:$(VENDOR_PATH)/lib64/libkeymasterutils.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/librpmb.so:$(VENDOR_PATH)/lib64/librpmb.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libdrmfs.so:$(VENDOR_PATH)/lib64/libdrmfs.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libdiag.so:$(VENDOR_PATH)/lib64/libdiag.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libssd.so:$(VENDOR_PATH)/lib64/libssd.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(VENDOR_PATH)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libqtikeymaster4.so:$(VENDOR_PATH)/lib64/libqtikeymaster4.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libsecureui_svcsock.so:$(VENDOR_PATH)/lib64/libsecureui_svcsock.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libqservice.so:$(VENDOR_PATH)/lib64/libqservice.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libSecureUILib.so:$(VENDOR_PATH)/lib64/libSecureUILib.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libsecureui.so:$(VENDOR_PATH)/lib64/libsecureui.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libStDrvInt.so:$(VENDOR_PATH)/lib64/libStDrvInt.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/hw:$(VENDOR_PATH)/lib64/hw \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/hw/android.hardware.boot@1.0-impl.so:$(VENDOR_PATH)/lib64/hw/android.hardware.boot@1.0-impl.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(VENDOR_PATH)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/hw/bootctrl.msm8953.so:$(VENDOR_PATH)/lib64/hw/bootctrl.msm8953.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libQSEEComAPI.so:$(VENDOR_PATH)/lib64/libQSEEComAPI.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libGPreqcancel.so:$(VENDOR_PATH)/lib64/libGPreqcancel.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/librecovery_updater_msm.so:$(VENDOR_PATH)/lib64/librecovery_updater_msm.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libkeymasterprovision.so:$(VENDOR_PATH)/lib64/libkeymasterprovision.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libtime_genoff.so:$(VENDOR_PATH)/lib64/libtime_genoff.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libqdutils.so:$(VENDOR_PATH)/lib64/libqdutils.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libqisl.so:$(VENDOR_PATH)/lib64/libqisl.so \
+    $(LOCAL_PATH)/rootdir/vendor/lib64/libdrmtime.so:$(VENDOR_PATH)/lib64/libdrmtime.so \
     $(LOCAL_PATH)/rootdir/sbin/libion.so:sbin/libion.so \
     $(LOCAL_PATH)/rootdir/sbin/qseecomd:sbin/qseecomd \
     $(LOCAL_PATH)/rootdir/sbin/ld.config.txt:sbin/ld.config.txt \
